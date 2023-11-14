@@ -45,8 +45,8 @@ const SearchBar: FC<SeachBarProps> = ({ getRes }) => {
 		<div
 			className={
 				isLoading || suggestions.length
-					? "relative flex w-full items-center gap-2 rounded-2xl  bg-main p-4 xl:w-10/12"
-					: "relative flex w-full items-center gap-2 rounded-2xl bg-main p-4 xl:w-10/12"
+					? "relative flex w-full items-center gap-2 rounded-2xl bg-main p-4"
+					: "relative flex w-full items-center gap-2 rounded-2xl bg-main p-4"
 			}
 		>
 			<SearchIcon />
@@ -60,7 +60,7 @@ const SearchBar: FC<SeachBarProps> = ({ getRes }) => {
 			<div
 				className={
 					isLoading || suggestions.length
-						? "bg-search absolute left-0 top-full mt-2 w-full rounded-2xl text-lg text-white "
+						? "absolute left-0 top-full mt-2 w-full rounded-2xl bg-search text-lg text-white "
 						: "hidden"
 				}
 			>

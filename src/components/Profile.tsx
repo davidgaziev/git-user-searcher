@@ -14,15 +14,15 @@ const Profile: FC<IUserProps> = ({ user }) => {
 	const date = convertDate(user.created_at);
 
 	return (
-		<main className="flex w-full rounded-xl bg-main p-4 text-white md:p-8 xl:w-10/12 xl:gap-16 xl:p-16">
-			<div className="max-lg:hidden">
+		<main className="flex w-full rounded-xl bg-main p-4 text-white md:p-8 xl:gap-10 xl:p-16">
+			<div className="flex-grow max-lg:hidden">
 				<img
-					className="w-48 rounded-full"
+					className="w-36 rounded-full"
 					src={user.avatar_url}
 					alt="profile avatar"
 				/>
 			</div>
-			<div className="w-full">
+			<div className="lg:w-3/4 2xl:w-4/5">
 				<div className="flex gap-4">
 					<div className="lg:hidden">
 						<img
@@ -55,7 +55,7 @@ const Profile: FC<IUserProps> = ({ user }) => {
 					</p>
 				)}
 
-				<div className="flex w-full gap-6 rounded-lg bg-slate-900 px-12 py-6 max-lg:text-center md:gap-24">
+				<div className="flex w-full gap-6 rounded-lg bg-slate-900 px-8 py-3 max-lg:text-center md:gap-24 md:px-12 md:py-6 2xl:justify-around">
 					<div>
 						<p className="text-sm text-gray-400 md:text-xl">Repos</p>
 						<span className="font-bold xl:text-2xl">{user.public_repos}</span>
